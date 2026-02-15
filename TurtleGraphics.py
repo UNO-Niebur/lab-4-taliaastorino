@@ -53,6 +53,12 @@ def main():
     myTurtle.pendown()
     
     fillCorner(myTurtle, 2)
+
+    myTurtle.penup()
+    myTurtle.goto(-125, 100)
+    myTurtle.pendown()
+    
+    drawPolygon(myTurtle, 6)
     
     turtle.done()
 
