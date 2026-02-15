@@ -10,24 +10,24 @@ def drawSquare(myTurtle, size):
         myTurtle.forward(size)
         myTurtle.right(90)
         
-def drawPolygon(bob, sides):
+def drawPolygon(myTurtle, sides):
     for s in range(sides):
-        bob.forward(50)
-        bob.right(360/sides)
+        myTurtle.forward(50)
+        myTurtle.right(360/sides)
         
-def fillCorner(alice, corner):
+def fillCorner(myTurtle, corner):
     #Draw big square
-    drawSquare(alice, 100)
+    drawSquare(myTurtle, 100)
     
     if corner == 1:
-        alice.begin_fill()
-        drawSquare(alice,50)
-        alice.end_fill()
+        myTurtle.begin_fill()
+        drawSquare(myTurtle,50)
+        myTurtle.end_fill()
     elif corner == 2:
-        alice.forward(50)
-        alice.begin_fill()
-        drawSquare(alice,50)
-        alice.end_fill()
+        myTurtle.forward(50)
+        myTurtle.begin_fill()
+        drawSquare(myTurtle,50)
+        myTurtle.end_fill()
 def squaresInSquares(myTurtle, num):
     size = 200
     
@@ -53,7 +53,7 @@ def main():
     myTurtle.pendown()
     
     fillCorner(myTurtle, 2)
-
+    
     myTurtle.penup()
     myTurtle.goto(-125, 100)
     myTurtle.pendown()
